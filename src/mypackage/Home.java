@@ -23,7 +23,11 @@ public class Home extends HttpServlet
 			{
 				if(cookies[i].getName().equals("username"))
 				{
+					resp.getOutputStream().println("<html>");
+					resp.getOutputStream().println("<h1>");
 					resp.getOutputStream().println("Welcome back, "+cookies[i].getValue());
+					resp.getOutputStream().println("</h1>");
+					resp.getOutputStream().println("</html>");
 					return;
 				}
 			}
